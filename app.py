@@ -8,8 +8,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
 ps = PorterStemmer()
-
-
+nltk.download('punkt')
+nltk.download('stopwords')
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
