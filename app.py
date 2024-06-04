@@ -2,14 +2,15 @@ import streamlit as st
 import pickle
 import string
 import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
 ps = PorterStemmer()
-nltk.download('punkt')
-nltk.download('stopwords')
+
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
